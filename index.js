@@ -1,6 +1,4 @@
-import timerTemplate from './templates/timer.hbs';
 const body = document.querySelector('body');
-body.insertAdjacentHTML('beforeend', timerTemplate());
 
 class CountdownTimer {
     constructor({ selector, targetDate }) {
