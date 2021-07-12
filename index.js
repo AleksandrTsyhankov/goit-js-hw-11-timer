@@ -33,6 +33,10 @@ class CountdownTimer {
 
         setInterval(() => {
             time -= 1000;
+            if (time < 0) {
+                return;
+            }
+
             const { daysCalculated, hoursCalculated, minutesCalculated, secondsCalculated } = this.calcTimer(time);
             
             this.daysCount.textContent = `${daysCalculated}`
@@ -45,6 +49,7 @@ class CountdownTimer {
 
 const timer = new CountdownTimer({
     selector: '#timer-1',
-    targetDate: new Date('Jul 17, 2019'),
+    // targetDate: new Date('Jul 17, 2019'),
+    targetDate: new Date('Jul 12, 2021 20:28:40'),
 });
 
